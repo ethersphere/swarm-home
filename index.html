@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost:3000/swarm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><meta http-equiv="X-UA-Compatible" ww="chrome=1"><title>Swarm</title><meta name="description" content="Ethereum is a decentralized platform for applications that run exactly as programmed without any chance of fraud, censorship or third-party interference."><meta name="twitter:card" value="summary"><meta property="og:title" content="Swarm"><meta property="og:type" content="article"><meta property="og:url" content="https://www.ethereum.org/swarm"><meta property="og:image" content="https://ethereum.org/images/wallpaper-homestead.jpg"><meta property="og:image:width" content="500"><meta property="og:image:height" content="500"><meta property="og:description" content="Ethereum is a decentralized platform for applications that run exactly as programmed without any chance of fraud, censorship or third-party interference."><link href="./Swarm_files/css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="./Swarm_files/frontier.min.css"><link rel="stylesheet" href="./Swarm_files/default.min.css"><script type="text/javascript" charset="utf-8" async="" src="./Swarm_files/timeline.d11f7a3b3287fb94220e8ee6d03cc772.js"></script></head><body class="MacIn"><div id="tutorial-start" class="main-tutorial swarm-page inner-header inner-page"><div class="container"><div class="row"><div class="col-md-6 tutorial scrollme"><figure class="swarm scrollme"><div data-when="span" data-to="0.6" data-from="0.3" data-opacity="0" data-translatex="-200" class="swarm-01 animateme" style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);"></div><div data-when="span" data-to="0.3" data-from="0.0" data-opacity="0" data-translatex="288" data-translatey="-180" class="swarm-02 animateme" style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);"></div><div data-when="span" data-to="0.4" data-from="0.1" data-opacity="0" data-translatex="144" data-translatey="90" class="swarm-03 animateme" style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);"></div><div data-when="span" data-to="0.5" data-from="0.2" data-opacity="0" data-translatex="-144" data-translatey="90" class="swarm-04 animateme" style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);"></div></figure></div><div class="col-md-6 tutorial scrollme"><div class="header-title"><h2 data-when="exit" data-from="0" data-to="1" data-translatey="400" data-easing="linear" class="animateme" style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">Swarm</h2><h3 data-when="exit" data-from="0" data-to="0.5" data-translatey="200" data-opacity="0" data-easing="linear" class="animateme" style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">serverless hosting incentivised peer-to-peer storage and content distribution</h3></div></div></div></div></div><div class="main-tutorial inner-page inner-tutorial"><div class="container"> <div class="row">               <ul id="tableOfContents" data-when="enter" data-from="0.4" data-to="0.2" data-translatex="-100" data-opacity="0" data-easing="linear" class="toc animateme"><li>
+<a href="swarm#resources">resources</a>
+<ul>
+<li>
+<a href="swarm#code-and-status">code and status</a>
+</li>
+<li>
+<a href="swarm#the-thsph-orange-paper-series">The ΞTHΞЯSPHΞЯΞ orange paper series</a>
+</li>
+<li>
+<a href="swarm#talks-on-swarm">talks on swarm</a>
+</li>
+<li>
+<a href="swarm#contact">contact</a>
+</li>
+<li>
+<a href="swarm#media">online press</a>
+</li>
+</ul>
+</li>
+</ul>
+
+<!-- <h3>what is swarm?</h1> -->
+<!-- <div class="grey col-md-12"><h1>what is swarm?</h1> -->
+
+<p>Swarm is a distributed storage platform and content distribution service, a native base layer service of the ethereum web 3 stack. The primary objective of Swarm is to provide a decentralized and redundant store of Ethereum's public record, in particular to store and distribute dapp code and data as well as block chain data.</p>
+
+<p>From the end user's perspective, Swarm is not that different from WWW, except that uploads are not to a specific server. The objective is to peer-to-peer storage and serving solution that is DDOS-resistant, zero-downtime, fault-tolerant and censorship-resistant as well as self-sustaining due to a built-in incentive system which uses peer to peer accounting and allows trading resources for payment. Swarm is designed to deeply integrate with the devp2p multiprotocol network layer of Ethereum as well as with the Ethereum blockchain for domain name resolution, service payments and content availability insurance. </p>
+
+<p>Two major features of swarm that sets it apart from other decentralised distributed storage solutions (bittorent, zeronet, IPFS) are 'upload and disappear' and the incentive system. The former refers to fact that
+Swarm does not only serve content, but it also provides a cloud storage service. Unlike related systems, you do not only publish the fact you host content, but there is a genuine sense in which you can just upload stuff to the swarm and potentially disappear (drop off as a node, disconnect or just operate without storage entirely) right away. Swarm aspires to be the generic storage and delivery service catering for all usecases ranging from serving low latency realtime interactive web applications as well as acting as guaranteed persistent storage for rarely used content.
+The incentive system makes sure that participating nodes following their rational self interest nontheless converge on an emergent swarm behaviour that is beneficial for the entire system as well as economically self-sustaining. In particular, it allows nodes in the network to pool their bandwidth and storage resources in the most efficient way to collectively provide services.
+</p>
+
+<p>The planned features of swarm include integrity protection, random access (range queries), url-based addressing, manifest-based routing on virtual hosts, domain name resolution via Ethereum Name Service, encryption support, plausible deniability, bandwidth and storage incentives, associated metadata, on-demand download of ethereum blockchain state/receipts/contract-storage, auto-scaling by popularity (elastic cloud), auto-syncing, client side configurable redundancy/availability
+A swarm-based internet needs to provide solutions for web3 usecases with decentralised infrastructure, so broadly speaking, it is a project towards the ambitious goal of building the third web in the ethersphere.
+</p>
+<!-- <h3 id="resources">Resources</h3> -->
+
+
+<h3 id="code-and-status">code and status</h3>
+
+<p>Swarm is alpha software. Use at your own risk. </p>
+
+<p>Code is currently at POC 0.2 codename 'sworm'. The source  is now in the main branch of the go-ethereum repository.
+</p>
+
+<p>The testnet is up and running POC 0.2 on Microsoft azure cloud connected to the Ropsten testnet.</p>
+
+<ul>
+  <li>
+    <a href="https://swarm-guide.readthedocs.io">swarm guide </a>
+    <a href="https://github.com/ethersphere/swarm-guide">(documentation source on github)</a>
+  </li>
+  <li>
+    <a href="https://github.com/ethereum/ens/wiki">Ethereum Name Service Wiki </a>
+  </li>
+  <li>
+    <a href="https://blog.ethereum.org">swarm alpha public pilot and the basics of swarm</a>
+  </li>
+  <li>
+    <a href="https://ethereum.github.io/go-ethereum">swarm go client binaries</a>
+  </li>
+  <li>
+    <a href="https://github.com/ethereum/go-ethereum">swarm go client source code repository on github</a>
+  </li>
+  <li>
+    <a href="https://github.com/ethereum/go-ethereum/labels/swarm">swarm issues on github</a>
+  </li>
+  <li>
+    <a href="https://github.com/ethereum/go-ethereum/projects/6">swarm project roadmap and POC series plan</a>
+  </li>
+  <li>
+    <a href="https://github.com/ethersphere/go-ethereum/wiki/IPFS-&amp;-SWARM">IPFS and SWARM</a>
+  </li>
+</ul>
+
+
+<h3 id="the-thsph-orange-paper-series">orange paper series</h3>
+
+<p>The ethershere orange paper series is an attempt to provide an umbrella for sharing and publishing technical reports of the ongoing research on formal foundations of web3 base layer infrastructure. Our aim is to foster synergy and collaboration between various groups and individuals working in the ethersphere.
+  The Orange of the orange paper pays hommage to the yellow paper but tainted with the blood sweat and tears of cutting edge research.
+</p>
+
+<p>
+The ethersphere orange lounge research group is a weekly reading seminar and brainstorming session. If you are interested to join, please contact us.
+</p>
+
+<p>Swarm incentive system research papers. We really encourage and appreciate any feedback be it a thorough acedemic peer review, suggestions for improvement, criticism, questions, typos or just a word of support.</p>
+
+<ul><li><a href="./ethersphere/orange-papers/1/sw^3.pdf">Viktor Trón, Aron Fischer, Dániel Nagy A and Zsolt Felföldi, Nick Johnson: swap, swear and swindle: incentive system for swarm.</a>  May 2016</li>
+<li><a href="./ethersphere/orange-papers/2/smash.pdf">Viktor Trón, Aron Fischer, Nick Johnson: smash-proof: auditable storage for swarm secured by masked audit secret hash.</a> May 2016</li>
+</ul>
+
+<h3 id="talks-on-swarm">talks on swarm</h3>
+
+
+<ul>
+  <li>
+    <a href="https://oktahedron.diskordia.org/?podcast=oh003-swarm">
+      Oktahedron podcast. Swarm with Viktor Trón.
+    </a>
+    An hour and a half deep dive into technological basis of swarm, the vision of web3, p2p and blockchain and more.
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=pLDDbCZXvTE">
+      Nick Johnson: ENS: Ethereum (Domain) Name System
+    </a>
+    <a href="https://ethereumfoundation.org/devcon/?session=40-ens-ethereum-domain-name-system">
+      DevCon2, Shanghai, 19th Sep 2016
+    </a>
+    [<a href="https://www.youtube.com/watch?v=pLDDbCZXvTE">watch video on youtube</a>]
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=RF8L6V_E-MM">
+      Viktor Trón, Aron Fischer: Swap, Swear and Swindle. Swarm Incentivisation.
+    </a>
+    <a href="https://ethereumfoundation.org/devcon/?session=swap-swear-and-swindle-swarm-incetivisation">
+      DevCon2, Shanghai, 19th Sep 2016.
+    </a>
+    [<a href="talks/devcon2/sw^3/sw^3-slides.pdf">slides in pdf</a>]
+    [<a href="https://www.youtube.com/watch?v=RF8L6V_E-MM">watch video on youtube</a>]
+  </li>
+  <li>
+    <a href="https://ethereumfoundation.org/devcon/?session=12-swarm-research-tbc">
+      Viktor Trón: Towards Web3 Infrastructure.
+    </a>
+    <a href="https://ethereumfoundation.org/devcon/?session=12-swarm-research-tbc">
+      DevCon2, Shanghai, 19th Sep 2016.
+    </a>
+    [<a href="talks/devcon2/web3/web3-slides.pdf">slides in pdf</a>]
+    [<a href="https://www.youtube.com/watch?v=RF8L6V_E-MM">watch video on youtube</a>]
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=xrw9rvee7rc">
+      Dániel A. Nagy: Developing Scalable Decentralized Applications for Swarm and Ethereum
+    </a>
+    <a href="https://ethereumfoundation.org/devcon/?session=developing-scalable-decentralized-applications-for-swarm-ethereum">
+      DevCon2, Shanghai, 19th Sep 2016
+    </a>
+    [<a href="https://www.youtube.com/watch?v=xrw9rvee7rc">watch video on youtube</a>]
+  </li>
+  <li>
+    <a href="https://www.meetup.com/Amsterdam-Ethereum-Meetup/events/232749871/">
+      Viktor Trón, Aron Fischer: Swarm.
+    </a>
+    <a href="https://www.meetup.com/Amsterdam-Ethereum-Meetup/events/232749871/">Ethereum Meetup, pre-DevCon edition, Amsterdam, 30th Aug 2016.</a>
+    [not recorded] [<a href="talks/amsterdam-2016-08-30/amsterdam-swarm-slides.pdf">slides in pdf</a>]
+  </li>
+   <li>
+    <a href="">
+      Viktor Trón, Aron Fischer: blockchain and web3.
+    </a>
+    <a href="http://www.ivir.nl/nl/over-ons/">
+      Institute for Information Law - University of Amsterdam, 2nd Sep 2016.
+    </a>
+    [not recorded][<a href="talks/amsterdam-2016-09-02/ivir-slides.pdf">slides in pdf</a>]
+  </li>
+   <li>
+    <a href="">
+      Viktor Trón, Aron Fischer: The rise of the third web. </a>
+    <a href="https://www.meetup.com/BitcoinWednesday/events/226293637/" >Bitcoin Wednesday Amsterdam #39, 7th Sept  2016.</a>
+    [<a href="talks/amsterdam-2016-09-07/web3.pdf">slides in pdf</a>]
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=Y9kch84cbPA">
+    Aron Fischer, Dániel A. Nagy, Viktor Trón: Swarm - Ethereum. </a>
+    <a href="http://www.meetup.com/Berlin-Ethereum-Meetup/events/231044919/">Ethereum Meetup, Berlin, 25 May 2016.</a>
+    [<a href="talks/berlin-2016-05-25/berlin-swarm-talk-final.pdf">slides in pdf</a>]
+    [<a href="https://www.youtube.com/watch?v=Y9kch84cbPA">watch video on youtube</a>]
+  </li>
+  <li>
+    <a href="talks/london-2016-06-09/london-swarm-talk.mp4">
+    Viktor Trón, Nick Johnson: Swarm, web3, and the Ethereum Name Service.</a>
+    <a href="http://www.meetup.com/ethereum/events/231452190">Ethereum meetup London, 9 June 2016.</a>
+    [<a href="talks/london-2016-06-09/london-swarm-talk-1-intro-slides.pdf">swarm slides in pdf</a>]
+    [<a href="talks/london-2016-06-09/london-swarm-talk-2-ENS-slides.pdf">ethereum name service slides in pdf</a>]
+    [<a2 href="https://www.youtube.com/watch?v=BAAAhZI7qRQ">watch video on youtube</a>]
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=vD8PAJvhH-4">
+    [in Hungarian] Nagy Dániel, Trón Viktor: Ethereum és Swarm: okos szerződések és elosztott világháló.
+    </a>
+    <a href="http://www.meetup.com/BitcoinBudapest/events/231862845/">Budapest Bitcoin Meetup. 20 June 2016.</a>
+    [<a href="talks/budapest-2016-06-20/budapest-swarm.pdf">slides in pdf (in Hungarian)</a>]
+    [<a href="https://www.youtube.com/watch?v=vD8PAJvhH-4">watch video on youtube (in Hungarian)</a>]
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=N_vtxw6nfmQ">
+      Dániel Nagy: Swarm: Distributed storage for Ethereum, the Turing-complete blockchain.
+    </a>
+    <a href="http://www.it-sobytie.ru/en/events/4868">Linux Piter Nov 2015.</a>
+    [<a href="talks/linux-piter-2015-11-21/linuxpiter.pdf">slides in pdf</a>]
+    [<a href="https://www.youtube.com/watch?v=N_vtxw6nfmQ">watch video on youtube</a>]
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=VOC45AgZG5Q">
+    Viktor Trón, Dániel A. Nagy: Swarm.</a>
+    <a href="">Ethereum Devcon1, London, Nov 2015.</a>
+    [<a href="">slides in pdf</a>]
+    [<a href="https://www.youtube.com/watch?v=VOC45AgZG5Q">watch video on youtube</a>]
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=QzYZQ03ON2o&amp;list=PLJqWcTqh_zKEjpSej3ddtDOKPRGl_7MhS">
+    Dániel A. Nagy: Keeping the public record safe and accessible.</a>
+    <a href="">Ethereum Devcon-0, Berlin, Dec 2014.  </a>
+    [<a href="">slides in pdf</a>]
+    [<a href="https://www.youtube.com/watch?v=QzYZQ03ON2o&amp;list=PLJqWcTqh_zKEjpSej3ddtDOKPRGl_7MhS">watch video on youtube</a>]
+  </li>
+</ul>
+
+<h3 id="contact">contact</h3>
+
+<ul><li><a href="https://twitter.com/ethersphere">@ethershere on twitter</a></li><li><a href="https://gitter.im/ethereum/swarm">gitter swarm room</a></li>
+<li><a href="http://swarm-gateways.net">public gateway http://swarm-gateways.net</a></li>
+<li><a href="http://web3.download">public gateway http://web3.download</a></li>
+</ul>
+
+<h3 id="media">online press</h3>
+
+<ul>
+
+
+
+  <li>
+    <a href="http://www.coindesk.com/ethereums-holy-trinity-takes-shape-swarm-testnet-arrives">
+
+Ethereum's holy trinity takes shape as swarm testnet arrives. Coindesk, Sep 25, 2016
+
+    </a>
+  </li>
+  <li>
+    <a href="http://www.coindesk.com/9-must-watch-talks-at-ethereums-devcon2-developer-event">
+
+9 must-watch talks at Ethereum's devcon2.  Coindesk, Sep 25, 2016
+
+    </a>
+  </li>
+  <li>
+    <a href="http://www.ibtimes.co.uk/ethereums-viktor-tron-talks-about-swarm-skeleton-web-3-0-1560654">
+
+Ethereum's Viktor Trón talks about Swarm and the skeleton of Web 3.0. Ian Alison, IBTimes UK. May 18, 2016
+
+    </a>
+  </li>
+  <li>
+    <a href="https://media.consensys.net/2016/06/30/decentralized-storage-the-backbone-of-the-third-web">
+Decentralized Storage: the Backbone of the Third Web. Arthur Falls on Consensys Blog. June 30, 2016
+
+    </a>
+  </li>
+  <li>
+    <a href="www.coinfox.info/news/5472-poverkh-ethereum-budet-postroena-platforma-detsentralizovannogo-khraneniya-dannykh-swarm-2">
+Decentralised storage Swarm to be built on Ethereum blockchain. Alexey Tereshchenko. Coinfox. 11 May, 2016
+
+    </a>
+  </li>
+
+</ul>
+
+
+
+</div></div></div></div><script src="./Swarm_files/frontier.min.js"></script><script src="./Swarm_files/highlight.min.js"></script><script>$(document).ready(function(){
+    $("#toc").tableOfContents(
+      $(".main-tutorial"),      // Scoped to div#wrapper
+      {
+        startLevel: 2,    // H2 and up
+        depth:      3    // H2 through h3,
+      }
+    );
+  });</script><script>   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)
+   },i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-47404697-1', 'auto');
+   ga('send', 'pageview');</script><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;"></iframe></body></html>
