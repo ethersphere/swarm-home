@@ -194,6 +194,10 @@ html {
 }
 footer {
   background-color: #222;
+  margin-bottom: 0px !important;
+}
+footer a {
+white-space: nowrap;
 }
 .footercon {
   background-color: #222;
@@ -203,9 +207,6 @@ footer {
   padding: 8px 16px;
   font-size: 1.3em;
   margin: 16px 0px;
-}
-footer {
-  margin-bottom: 0px !important;
 }
 /*--.logo {
 max-width: 100%;
