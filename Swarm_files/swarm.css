@@ -197,7 +197,10 @@ footer {
   margin-bottom: 0px !important;
 }
 footer a {
-white-space: nowrap;
+  white-space: nowrap;
+}
+footer a:not(:first-of-type) {
+  margin-left: 10px;
 }
 .footercon {
   background-color: #222;
