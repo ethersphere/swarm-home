@@ -15,6 +15,7 @@
 .navbar {
   z-index: 100 !important;
   overflow: auto !important;
+  border: 0;
 }
 .navbar-header a {
   color: #F7A000 !important;
