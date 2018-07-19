@@ -86,6 +86,7 @@
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="#intro">Introduction</a></li>
+          <li class="active"><a href="#install">Install</a></li>
           <li class="active"><a href="#research">Research</a></li>
           <li class="active"><a href="#documentation">Documentation</a></li>
           <li class="active"><a href="#status">Status / Code</a></li>
@@ -199,6 +200,43 @@
     </div><!-- //Container -->
   </section><!-- //Status -->
 
+  <section id="install">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-12 text-left">
+          <div class="page-header">
+            <h1>Installing Swarm</h1>
+          </div>
+          <h3>Install on Ubuntu via PPAs</h3>
+          <p>The simplest way to install Swarm on Ubuntu distributions is via the built in launchpad PPAs (Personal Package Archives). We provide a single PPA repository that contains our stable releases for Ubuntu versions trusty, xenial, artful, bionic and cosmic.</p>
+
+          <p>To enable our launchpad repository please run:</p>
+
+          <p style="font-family: monospace">
+            sudo apt-get install software-properties-common<br/>
+            sudo add-apt-repository -y ppa:ethereum/ethereum<br/>
+
+            sudo apt-get update<br/>
+            sudo apt-get install ethereum-swarm<br/>
+          </p>
+
+          <p>&nbsp;</p>
+
+          <h3>Installing Swarm from source</h3>
+          <p>The latest Swarm source code can be found on Github: <a href="https://github.com/ethereum/go-ethereum" target="_blank">https://github.com/ethereum/go-ethereum</a>. To build Swarm from source, you'll need to ensure that you have Go 1.10 installed (or latest version).</p>
+
+          <p>Assuming you have Go installed, you can run:</p>
+
+          <p style="font-family: monospace">
+            go get -d github.com/ethereum/go-ethereum<br/>
+            go install github.com/ethereum/go-ethereum/cmd/swarm<br/>
+          </p>
+
+        </div>
+      </div>
+    </div><!-- //Container -->
+  </section><!-- //Install -->
+
   <section id="research">
     <div class="container">
       <div class="row">
@@ -214,20 +252,20 @@
           <p class="lead">We encourage and appreciate any feedback be it a thorough academic peer review, suggestions for improvement, criticism, questions, typos or just a word of support.</p>
           <ul>
             <li class="lead">
-              <a target="_blank" href="./ethersphere/orange-papers/1/sw^3.pdf">Viktor Trón, Aron Fischer, Dániel Nagy A and Zsolt Felföldi, Nick Johnson: swap, swear and swindle: incentive system for swarm.</a>
+              <a target="_blank" href="./ethersphere/orange-papers/1/sw^3.pdf">Viktor Trón, Aron Fischer, Dániel Nagy A and Zsolt Felföldi, Nick Johnson: swap, swear and swindle: incentive system for Swarm.</a>
               May 2016
             </li>
             <li class="lead">
-              <a target="_blank" href="./ethersphere/orange-papers/2/smash.pdf">Viktor Trón, Aron Fischer, Nick Johnson: smash-proof: auditable storage for swarm secured by masked audit secret hash.</a>
+              <a target="_blank" href="./ethersphere/orange-papers/2/smash.pdf">Viktor Trón, Aron Fischer, Nick Johnson: smash-proof: auditable storage for Swarm secured by masked audit secret hash.</a>
               May 2016
             </li>
             <li class="lead">
-              <a target="_blank" href="./ethersphere/orange-papers/3/sw3games.pdf">Viktor Trón, Aron Fischer, Fabio Barone, ?: swap swear and swindle games: scalable infrastructure for decentralised service economies.</a>
-              Oct 2017
+              Viktor Trón, Aron Fischer, Fabio Barone: swap swear and swindle games: scalable infrastructure for decentralised service economies.
+              Not published yet.
             </li>
             <li class="lead">
-              <a target="_blank" href="./ethersphere/orange-papers/4/pot.pdf">Viktor Trón, Elad Verbin?, Louis Holbrook?: P.O.T. Data structure for decentralised database services on swarm.</a>
-              Oct 2017
+              Viktor Trón, Elad Verbin?, Louis Holbrook: P.O.T. Data structure for decentralised database services on Swarm.
+              Not published yet.
             </li>
           </ul>
         </div>
@@ -244,7 +282,7 @@
           </div>
           <p class="lead">
 		Swarm documentation can be found at <a target="_blank" href="https://swarm-guide.readthedocs.io/en/latest/">swarm-guide.readthedocs.io</a>. <BR>
-Since swarm is under active development, new features are constantly being added, tweaked and fine-tuned. In order to keep the documentation relatively up to date, the community is encouraged to contribute to the guide by submitting pull requests to the <a href="https://github.com/ethersphere/swarm-guide" target="_blank">documentation repository</a>.
+Since Swarm is under active development, new features are constantly being added, tweaked and fine-tuned. In order to keep the documentation relatively up to date, the community is encouraged to contribute to the guide by submitting pull requests to the <a href="https://github.com/ethersphere/swarm-guide" target="_blank">documentation repository</a>.
 	</p>
         </div>
       </div>
@@ -261,10 +299,10 @@ Since swarm is under active development, new features are constantly being added
           <p class="lead">
 Swarm is under active development.
 <ul>
-<li class="lead">Proof-of-Concept 0.2 was <a href="https://blog.ethereum.org/2016/12/15/swarm-alpha-public-pilot-basics-swarm/">released</a> in 2016.</li>
+<li class="lead">Proof-of-Concept 0.3 was <a href="https://blog.ethereum.org/2018/06/21/announcing-swarm-proof-of-concept-release-3/">released</a> in June, 2018.</li>
 <li class="lead">The <a href="https://github.com/ethersphere/swarm/wiki/Roadmap">roadmap</a> describes the current status of development, and outlines the path to the upcoming PoC 0.3 and PoC 0.4 releases.</li>
 <li class="lead">Work is progressing on <a href="https://github.com/ethersphere/swarm/wiki/Working-groups">several fronts in parallel</a>. </li>
-<li class="lead">Keep up to date by joining the <a href="https://gitter.im/ethereum/swarm">swarm gitter channel</a>.</li>
+<li class="lead">Keep up to date by joining the <a href="https://gitter.im/ethereum/swarm">Swarm gitter channel</a>.</li>
 </ul>
 
 
@@ -284,16 +322,16 @@ Swarm is under active development.
           <p class="lead">In October 2017 five<a href="https://github.com/ethersphere/swarm/wiki/Working-groups"> working groups</a> are starting.</p>
           <p class="lead">
 		<a href="https://github.com/ethersphere/swarm/wiki/Working-groups#network-testing-and-simulation-framework">Network Testing and Simulation Framework</a></p>
-	<p class="lead">A project aimed at testing the behaviour of many interconnected swarm clients, to observe emergent network behaviour and use the results to make the swarm more efficient and resilient. (<a href="https://youtu.be/-c_kTW_aNgg">demo</a>)
+	<p class="lead">A project aimed at testing the behaviour of many interconnected Swarm clients, to observe emergent network behaviour and use the results to make the Swarm more efficient and resilient. (<a href="https://youtu.be/-c_kTW_aNgg">demo</a>)
 	  </p>
 	<p class="lead">
 	<a href="https://github.com/ethersphere/swarm/wiki/Working-groups#pss-messaging-and-communication-tools">PSS</a>
 </p>
-	<p class="lead">PSS is concerned with routing messages over the swarm network to allow direct node-to-node communication as well as decentralised email and postal services. (<a href="https://www.youtube.com/watch?v=x9Rs23itEXo">demo</a>)
+	<p class="lead">PSS is concerned with routing messages over the Swarm network to allow direct node-to-node communication as well as decentralised email and postal services. (<a href="https://www.youtube.com/watch?v=x9Rs23itEXo">demo</a>)
 </p>
 	<p class="lead"><a href="https://github.com/ethersphere/swarm/wiki/Working-groups#streaming">Streaming</a>
 </p>
-	<p class="lead">This project aims to bring streaming content (audio / video) to the swarm network. (<a href="https://www.youtube.com/watch?v=MB-drzcRCD8">demo</a>)
+	<p class="lead">This project aims to bring streaming content (audio / video) to the Swarm network. (<a href="https://www.youtube.com/watch?v=MB-drzcRCD8">demo</a>)
 </p>
 </p>
 	<p class="lead"><a href="https://github.com/ethersphere/swarm/wiki/Working-groups#db-support-pot-and-indexing">POT/SWORD model for Decentralised database services</a>
@@ -302,11 +340,11 @@ Swarm is under active development.
 </p>
 	<p class="lead"><a href="https://github.com/ethersphere/swarm/wiki/Working-groups#swap-swear-and-swindle---contract-development">Swap, Swear and Swindle contract development</a>
 </p>
-	<p class="lead">Swap-Swear-Swindle is the name of swarm's state channel infrastructure as described in the orange papers. This working group aims to <a href="https://github.com/ethersphere/swap-swear-and-swindle">implement</a> this generic incentive structure on the ethereum blockchain.
+	<p class="lead">Swap-Swear-Swindle is the name of Swarm's state channel infrastructure as described in the orange papers. This working group aims to <a href="https://github.com/ethersphere/swap-swear-and-swindle">implement</a> this generic incentive structure on the ethereum blockchain.
 </p>
 	<p class="lead"><a href="https://github.com/ethersphere/swarm/wiki/Roadmap#obfuscation-encryption-and-transcoding-track">Data Encoding and Encryption</a>
 </p>
-	<p class="lead">Swarm  is planning to use erasure coding and encryption to ensure data availablilty an security. Well designed obfuscation schemes allow content to be hosted on the network without endagering the participating nodes by guaranteeing them plasuble deniability. (<a href="https://youtu.be/fOJgNPdwy18">demo</a>)
+	<p class="lead">Swarm is planning to use erasure coding and encryption to ensure data availablilty an security. Well designed obfuscation schemes allow content to be hosted on the network without endagering the participating nodes by guaranteeing them plasuble deniability. (<a href="https://youtu.be/fOJgNPdwy18">demo</a>)
         </div>
       </div>
     </div><!-- //Container -->
@@ -318,7 +356,7 @@ Swarm is under active development.
         <div class="col-xs-12 col-md-12 text-left">
           <div class="page-header">
 		  <h1>Talks</h1><br>
-		  <p class="lead">The talks from the 2017 Swarm Orange Summit can be found at <a href="/bzz:/swarm-orange-summit.eth/">swarm-orange-summit.eth/</a>.<br>Other Swarm-related presentations are listed below:</p>
+		  <p class="lead">The talks from the 2017 Swarm Orange Summit can be found at <a href="/bzz:/swarm-orange-summit.eth/">swarm-orange-summit.eth</a>.<br/>Other Swarm-related presentations are listed below:</p>
           </div>
           <table class="table table-responsive text-left">
             <tr>
@@ -328,7 +366,7 @@ Swarm is under active development.
               <td>PDF</td>
             </tr>
             <tr>
-              <td>An hour and a half deep dive into technological basis of swarm, the vision of web3, p2p and blockchain and more.</td>
+              <td>An hour and a half deep dive into technological basis of Swarm, the vision of web3, p2p and blockchain and more.</td>
               <td><a target="_blank" href="https://oktahedron.diskordia.org/?podcast=oh003-swarm">Oktahedron podcast. Swarm with Viktor Trón.</a></td>
               <td>-</td>
               <td>-</td>
@@ -436,8 +474,8 @@ Swarm is under active development.
               <td>Links</td>
             </tr>
             <tr>
-              <td>Ethereum's holy trinity takes shape as swarm testnet arrives.</td>
-              <td><a target="_blank" href="http://www.coindesk.com/ethereums-holy-trinity-takes-shape-swarm-testnet-arrives">Ethereum's holy trinity takes shape as swarm testnet arrives. Coindesk, Sep 25, 2016</a></td>
+              <td>Ethereum's holy trinity takes shape as Swarm testnet arrives.</td>
+              <td><a target="_blank" href="http://www.coindesk.com/ethereums-holy-trinity-takes-shape-swarm-testnet-arrives">Ethereum's holy trinity takes shape as Swarm testnet arrives. Coindesk, Sep 25, 2016</a></td>
             </tr>
             <tr>
               <td>9 must-watch talks at Ethereum's devcon2.</td>
@@ -502,13 +540,13 @@ Swarm is under active development.
           </a>
           <a href="https://github.com/ethereum/go-ethereum/tree/master/swarm">
             <i class="fa fa-github-alt" aria-hidden="true"></i>
-            swarm on Github
+            Swarm on Github
           </a>
           <a href="https://twitter.com/ethersphere">
             <i class="fa fa-twitter" aria-hidden="true"></i>
-            swarm on Twitter
+            Swarm on Twitter
           </a>
-          <span class="text-right" style="float:right; color:#ccc; font-weight:200;font-size: 0.7em; margin-top: 6px;">©2017 swarm</span>
+          <span class="text-right" style="float:right; color:#ccc; font-weight:200;font-size: 0.7em; margin-top: 6px;">©2018 Swarm</span>
         </div>
       </div><!--row-->
     </div><!--container-->
