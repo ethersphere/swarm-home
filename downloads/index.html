@@ -40,10 +40,9 @@
   <!-- modernizer -->
   <script src="../js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   <!-- from swarm master -->
-  <link href="../Swarm_files/css" rel="stylesheet" type="text/css">
+  <link href="../Swarm_files/css.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="../Swarm_files/frontier.min.css">
   <link rel="stylesheet" href="../Swarm_files/default.min.css">
-  <!--<script type="text/javascript" charset="utf-8" async="" src="../Swarm_files/timeline.d11f7a3b3287fb94220e8ee6d03cc772.js"></script>-->
   <!-- new swarm-home-css -->
   <link rel="stylesheet" href="../Swarm_files/swarm.css">
 
@@ -54,25 +53,6 @@
     <script src="../scripts/emojify.min.js"></script>
     <script src="../scripts/filesize.min.js"></script>
     <script src="../scripts/custom/polyfills.js"></script>
-
-  <!-- SMOOTH SCROLL -->
-  <script>
-    $(function() {
-      $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
-          }
-        }
-      });
-    });
-  </script>
-  <!-- End of SMOOTH SCROLL -->
 </head>
 
 <body class="">
