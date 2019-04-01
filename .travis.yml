@@ -16,11 +16,12 @@ env:
     - SWARM_BZZ_API=https://swarm-public-staging.stg.swarm-gateways.net/
 
 stages:
-  - release
-  - deploy
+  - name: release
+    if: tag IS present
+  - name: deploy
+    if: tag IS present
 
 before_script:
-  - export TRAVIS_TAG=${TRAVIS_TAG:-$(git log --format=%h -1)}
   - export RELEASE_FILE="swarm-home-$TRAVIS_TAG.zip"
   - git config --global user.email "travis@travis-ci.org"
   - git config --global user.name "Travis CI"
@@ -42,6 +43,7 @@ jobs:
 
     - stage: deploy
       script:
+        - set -xe
         - curl -o release.zip "https://github.com/ethersphere/swarm-home/releases/download/$TRAVIS_TAG/$RELEASE_FILE"
         - unzip release.zip -d .release
         - docker pull ethdevops/swarm:$SWARM_VERSION
