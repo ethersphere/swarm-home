@@ -6,7 +6,7 @@ branches:
   only:
   - master
   - ci-cd
-  - /v(\d+\.)(\d)/
+  - /v(\d+\.)(\d+\.)(\d)/
 
 env:
   global:
@@ -21,7 +21,7 @@ stages:
 before_install:
   - sudo add-apt-repository -y ppa:ethereum/ethereum
   - sudo apt-get update
-  - sudo apt-get install -y ethereum-swarm
+  - sudo apt-get install -y ethereum-swarm tar
 
 before_script:
   - export RELEASE_FILE="swarm-home-$TRAVIS_TAG.tar.gz"
@@ -31,10 +31,7 @@ jobs:
     - stage: release
       script: echo "Deploying to GitHub releases ..."
       before_deploy:
-        - >-
-          tar -zcvf $RELEASE_FILE
-              --exclude='.travis'
-              --exclude='.git' .
+        - tar -zcvf $RELEASE_FILE --exclude='.travis' --exclude='.git' $PWD
       deploy:
         provider: releases
         api_key: "$RELEASE_OAUTH_TOKEN"
