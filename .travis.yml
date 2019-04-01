@@ -32,7 +32,7 @@ jobs:
       script: echo "Deploying to GitHub releases ..."
       before_deploy:
         - export TMP_DIR=`mktemp -d`
-        - tar -zcvf $TMP_DIR/$RELEASE_FILE --exclude='.travis' --exclude='.git' $PWD
+        - tar -zcvf $TMP_DIR/$RELEASE_FILE --exclude='.travis' --exclude='.git' -C $PWD .
       deploy:
         provider: releases
         api_key: "$RELEASE_OAUTH_TOKEN"
