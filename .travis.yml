@@ -34,7 +34,6 @@ jobs:
       script: echo "Deploying to GitHub releases ..."
       before_deploy:
         - git archive -o $RELEASE_FILE -9 HEAD
-        - git tag $TRAVIS_TAG
       deploy:
         provider: releases
         api_key: "$RELEASE_OAUTH_TOKEN"
