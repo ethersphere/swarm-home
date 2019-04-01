@@ -46,8 +46,8 @@ jobs:
     - stage: deploy
       script:
         - set -xe
-        - curl -o release.zip "https://github.com/ethersphere/swarm-home/releases/download/$TRAVIS_TAG/$RELEASE_FILE"
-        - unzip release.zip -d .release
+        - wget https://github.com/ethersphere/swarm-home/releases/download/$TRAVIS_TAG/$RELEASE_FILE
+        - mkdir .release && unzip -v -d .release $RELEASE_FILE
         - docker pull ethdevops/swarm:$SWARM_VERSION
         - >-
           export HASH=$(docker run --rm -it --entrypoint /swarm
