@@ -5,7 +5,6 @@ sudo: true
 branches:
   only:
   - master
-  - ci-cd
   - /v(\d+\.)(\d+\.)(\d)/
 
 env:
