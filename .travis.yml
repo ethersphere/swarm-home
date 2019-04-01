@@ -1,10 +1,6 @@
 language: generic
-
 dist: trusty
-sudo: false
-
-services:
-  - docker
+sudo: true
 
 branches:
   only:
@@ -14,7 +10,6 @@ branches:
 
 env:
   global:
-    - SWARM_VERSION=v0.3.11
     - SWARM_BZZ_API=https://swarm-public-staging.stg.swarm-gateways.net/
 
 stages:
@@ -23,17 +18,23 @@ stages:
   - name: deploy
     if: tag IS present
 
+before_install:
+  - sudo add-apt-repository -y ppa:ethereum/ethereum
+  - sudo apt-get update
+  - sudo apt-get install -y ethereum-swarm
+
 before_script:
-  - export RELEASE_FILE="swarm-home-$TRAVIS_TAG.zip"
-  - git config --global user.email "travis@travis-ci.org"
-  - git config --global user.name "Travis CI"
+  - export RELEASE_FILE="swarm-home-$TRAVIS_TAG.tar.gz"
 
 jobs:
   include:
     - stage: release
       script: echo "Deploying to GitHub releases ..."
       before_deploy:
-        - git archive -o $RELEASE_FILE -9 HEAD
+        - >-
+          tar -zcvf $RELEASE_FILE
+              --exclude='.travis'
+              --exclude='.git' .
       deploy:
         provider: releases
         api_key: "$RELEASE_OAUTH_TOKEN"
@@ -45,16 +46,4 @@ jobs:
 
     - stage: deploy
       script:
-        - wget https://github.com/ethersphere/swarm-home/releases/download/$TRAVIS_TAG/$RELEASE_FILE
-        - mkdir .release && unzip -v -d .release $RELEASE_FILE
-        - ls -la .release
-        - docker pull ethdevops/swarm:$SWARM_VERSION
-        - >-
-          export HASH=$(docker run --rm -it --entrypoint /swarm
-          -v $PWD/.release:/release
-          -v /etc/ssl/certs/ca-certificates.crt:/etc/ssl/certs/ca-certificates.crt:ro
-          ethdevops/swarm:$SWARM_VERSION
-          --bzzapi $SWARM_BZZ_API
-          --defaultpath /release/index.html
-          --recursive up /release)
-        - "echo \"Uploaded sucessfully to swarm: $HASH\""
+        - .travis/deploy.sh
