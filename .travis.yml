@@ -41,7 +41,8 @@ jobs:
         file: "$RELEASE_FILE"
         skip_cleanup: true
         on:
-          branch: ci-cd
+          all_branches: true
+          tags: true
 
     - stage: deploy
       script:
