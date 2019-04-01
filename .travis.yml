@@ -8,7 +8,9 @@ services:
 
 branches:
   only:
+  - master
   - ci-cd
+  - /v(\d+\.)(\d)/
 
 env:
   global:
