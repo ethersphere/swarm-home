@@ -31,11 +31,12 @@ jobs:
     - stage: release
       script: echo "Deploying to GitHub releases ..."
       before_deploy:
-        - tar -zcvf $RELEASE_FILE --exclude='.travis' --exclude='.git' $PWD
+        - export TMP_DIR=`mktemp -d`
+        - tar -zcvf $TMP_DIR/$RELEASE_FILE --exclude='.travis' --exclude='.git' $PWD
       deploy:
         provider: releases
         api_key: "$RELEASE_OAUTH_TOKEN"
-        file: "$RELEASE_FILE"
+        file: "$TMP_DIR/$RELEASE_FILE"
         skip_cleanup: true
         on:
           all_branches: true
