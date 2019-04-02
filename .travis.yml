@@ -16,7 +16,7 @@ stages:
 before_install:
   - sudo add-apt-repository -y ppa:ethereum/ethereum
   - sudo apt-get update
-  - sudo apt-get install -y ethereum-swarm tar
+  - sudo apt-get install -y ethereum-swarm tar jq
 
 before_script:
   - export RELEASE_FILE="swarm-home-$TRAVIS_TAG.tar.gz"
