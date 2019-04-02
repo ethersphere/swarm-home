@@ -6,7 +6,7 @@ SWARM_BZZ_API="https://swarm-public-staging.stg.swarm-gateways.net/"
 GITHUB_ORG="ethersphere"
 GITHUB_REPO="swarm-home"
 GITHUB_USER="${GITHUB_USER:-bzzbot}"
-GITHUB_SECRET="${GITHUB_SECRET:$RELEASE_OAUTH_TOKEN}"
+GITHUB_SECRET="${GITHUB_SECRET:-$RELEASE_OAUTH_TOKEN}"
 
 RELEASE_DIR=$(mktemp -d)
 RELEASE_FILE="swarm-home-$TAG.tar.gz"
