@@ -6,6 +6,7 @@ SWARM_BZZ_API="https://swarm-public-staging.stg.swarm-gateways.net/"
 GITHUB_ORG="ethersphere"
 GITHUB_REPO="swarm-home"
 GITHUB_USER="${GITHUB_USER:-bzzbot}"
+GITHUB_SECRET="${GITHUB_SECRET:$RELEASE_OAUTH_TOKEN}"
 
 RELEASE_DIR=$(mktemp -d)
 RELEASE_FILE="swarm-home-$TAG.tar.gz"
@@ -22,7 +23,7 @@ SWARM_MANIFEST=$(swarm --bzzapi $SWARM_BZZ_API --defaultpath "$RELEASE_DIR/index
 RID=$(curl -s https://api.github.com/repos/$GITHUB_ORG/$GITHUB_REPO/releases/tags/v1.0.2 | jq '.id')
 
 echo "Updating release notes for release $RID ..."
-curl -u "$GITHUB_USER:$RELEASE_OAUTH_TOKEN" -i -X PATCH \
+curl -u "$GITHUB_USER:$GITHUB_SECRET" -i -X PATCH \
   "https://api.github.com/repos/$GITHUB_ORG/$GITHUB_REPO/releases/$RID" \
   -H "Accept: application/json" \
   -d @- << EOF
