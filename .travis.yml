@@ -7,10 +7,6 @@ branches:
   - master
   - /v(\d+\.)(\d+\.)(\d)/
 
-env:
-  global:
-    - SWARM_BZZ_API=https://swarm-public-staging.stg.swarm-gateways.net/
-
 stages:
   - name: release
     if: tag IS present
