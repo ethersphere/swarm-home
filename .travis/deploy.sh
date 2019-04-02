@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -xe
 TAG="${TAG:-$TRAVIS_TAG}"
 
 SWARM_BZZ_API="https://swarm-public-staging.stg.swarm-gateways.net/"
@@ -21,7 +21,7 @@ SWARM_MANIFEST=$(swarm --bzzapi $SWARM_BZZ_API --defaultpath "$RELEASE_DIR/index
 
 # Update GitHub release description
 RID=$(curl -s -u "$GITHUB_USER:$GITHUB_SECRET" \
-      https://api.github.com/repos/$GITHUB_ORG/$GITHUB_REPO/releases/tags/v1.0.2 | jq '.id')
+      "https://api.github.com/repos/$GITHUB_ORG/$GITHUB_REPO/releases/tags/$TAG" | jq '.id')
 
 echo "Updating release notes for release $RID ..."
 curl -u "$GITHUB_USER:$GITHUB_SECRET" -i -X PATCH \
