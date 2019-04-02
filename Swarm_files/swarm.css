@@ -318,6 +318,9 @@ html, body {
   footer a:not(:first-of-type) {
   margin-left: 0;
   }
+  .main li:not(:first-child) {
+    border-left-width: 0;
+  }
 }
 
 @media (min-width: 800px) {
