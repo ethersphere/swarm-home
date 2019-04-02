@@ -329,3 +329,8 @@ html, body {
 .inner-header .header-title h3{
   text-transform: uppercase;
 }
+
+
+.navbar-header .navbar-toggle:hover{
+  margin-bottom: 0;
+}
