@@ -1,12 +1,35 @@
-#!/bin/bash -xe
+#!/bin/bash -e
+TAG="${TAG:-$TRAVIS_TAG}"
 
-RELEASE_DIR=`mktemp -d`
+SWARM_BZZ_API="https://swarm-public-staging.stg.swarm-gateways.net/"
+
+GITHUB_ORG="ethersphere"
+GITHUB_REPO="swarm-home"
+GITHUB_USER="${GITHUB_USER:-bzzbot}"
+GITHUB_SECRET="${GITHUB_SECRET:$RELEASE_OAUTH_TOKEN}"
+
+RELEASE_DIR=$(mktemp -d)
+RELEASE_FILE="swarm-home-$TAG.tar.gz"
 
 # Download and extract release
-wget -v https://github.com/ethersphere/swarm-home/releases/download/$TRAVIS_TAG/$RELEASE_FILE
-tar -zxvf $RELEASE_FILE -C $RELEASE_DIR
+wget -v "https://github.com/$GITHUB_ORG/$GITHUB_REPO/releases/download/$TAG/$RELEASE_FILE"
+tar -zxvf "$RELEASE_FILE" -C "$RELEASE_DIR"
 
 # Upload to swarm
-swarm --bzzapi $SWARM_BZZ_API \
-      --defaultpath $RELEASE_DIR/index.html \
-      --recursive up $RELEASE_DIR
+echo "Uploading $TAG to swarm..."
+SWARM_MANIFEST=$(swarm --bzzapi $SWARM_BZZ_API --defaultpath "$RELEASE_DIR/index.html" --recursive up "$RELEASE_DIR")
+
+# Update GitHub release description
+RID=$(curl -s https://api.github.com/repos/$GITHUB_ORG/$GITHUB_REPO/releases/tags/v1.0.2 | jq '.id')
+
+echo "Updating release notes for release $RID ..."
+curl -u "$GITHUB_USER:$GITHUB_SECRET" -i -X PATCH \
+  "https://api.github.com/repos/$GITHUB_ORG/$GITHUB_REPO/releases/$RID" \
+  -H "Accept: application/json" \
+  -d @- << EOF
+{
+  "tag_name": "$TAG",
+  "name": "$TAG",
+  "body": "[\`bzz://$SWARM_MANIFEST\`](https://swarm-gateways.net/bzz:/$SWARM_MANIFEST/)"
+}
+EOF

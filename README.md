@@ -19,6 +19,3 @@ For example:
 git tag v1.0.0
 git push origin v1.0.0
  ```
-
-
-**Note:** Once the travis job finishes, please check the logs and update the release description so that it includes the swarm manifest digest.
