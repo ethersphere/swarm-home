@@ -1,0 +1,42 @@
+language: generic
+dist: trusty
+sudo: true
+
+branches:
+  only:
+  - master
+  - /v(\d+\.)(\d+\.)(\d)/
+
+stages:
+  - name: release
+    if: tag IS present
+  - name: deploy
+    if: tag IS present
+
+before_install:
+  - sudo add-apt-repository -y ppa:ethereum/ethereum
+  - sudo apt-get update
+  - sudo apt-get install -y ethereum-swarm tar jq
+
+before_script:
+  - export RELEASE_FILE="swarm-home-$TRAVIS_TAG.tar.gz"
+
+jobs:
+  include:
+    - stage: release
+      script: echo "Deploying to GitHub releases ..."
+      before_deploy:
+        - export TMP_DIR=`mktemp -d`
+        - tar -zcvf $TMP_DIR/$RELEASE_FILE --exclude='.travis' --exclude='.git' -C $PWD .
+      deploy:
+        provider: releases
+        api_key: "$RELEASE_OAUTH_TOKEN"
+        file: "$TMP_DIR/$RELEASE_FILE"
+        skip_cleanup: true
+        on:
+          all_branches: true
+          tags: true
+
+    - stage: deploy
+      script:
+        - .travis/deploy.sh

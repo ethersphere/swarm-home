@@ -241,9 +241,6 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
-#tutorial-start {
-  height: 100vh;
-}
 
 @media (max-width: 1166px) {
     /* tagline text*/
@@ -268,6 +265,9 @@ html, body {
 }
 
 @media (max-width: 800px) {
+  #tutorial-start {
+    height: 100vh;
+  }
   .inner-header {
     padding: 0;
   }
@@ -318,4 +318,22 @@ html, body {
   footer a:not(:first-of-type) {
   margin-left: 0;
   }
+  .main li:not(:first-child) {
+    border-left-width: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .inner-page.inner-header .row, .inner-header .scrollme{
+    display: flex;
+  }
+}
+
+.inner-header .header-title h3{
+  text-transform: uppercase;
+}
+
+
+.navbar-header .navbar-toggle:hover{
+  margin-bottom: 0;
 }
