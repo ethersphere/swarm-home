@@ -1,0 +1,25 @@
+image: registry.gitlab.com/pages/hugo:latest
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+test:
+  script:
+  - cd doc/
+  - hugo
+  except:
+  - master
+
+before_script:
+- git submodule init
+- git submodule update --force
+
+pages:
+  script:
+  - cd doc/
+  - hugo
+  artifacts:
+    paths:
+    - doc/public
+  only:
+  - master
