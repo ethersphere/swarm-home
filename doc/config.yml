@@ -1,0 +1,8 @@
+baseURL: https://offcode.gitlab.io/swarm-handbook/
+languageCode: en-us
+title: Swarm Handbook
+
+buildExpired: true
+theme: learn
+params:
+  themeVariant: orange
