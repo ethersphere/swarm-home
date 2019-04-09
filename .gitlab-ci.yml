@@ -16,11 +16,12 @@ before_script:
 
 pages:
   script:
-  - apt-get install rsync
-  - mkdir -p public
-  - cd src && hugo -d ../public && cd -
-  - mv public/index.html public/doc.html
-  - rsync -a * public --exclude src --exclude public
+  - mkdir -p /tmp/public
+  - cd src && hugo -d /tmp/public && cd -
+  - mv /tmp/public/index.html /tmp/public/doc.html
+  - cp -r * /tmp/public/
+  - rm -rf /tmp/public/src
+  - mv /tmp/public .
   artifacts:
     paths:
     - public
