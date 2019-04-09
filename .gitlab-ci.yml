@@ -16,9 +16,9 @@ before_script:
 
 pages:
   script:
-  - mkdir -p /tmp/public
+  - mkdir -p /tmp/public/doc
   - cd src && hugo -d /tmp/public && cd -
-  - mv /tmp/public/index.html /tmp/public/doc.html
+  - mv /tmp/public/index.html /tmp/public/doc/index.html
   - cp -r * /tmp/public/
   - rm -rf /tmp/public/src
   - mv /tmp/public .
