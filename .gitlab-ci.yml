@@ -17,9 +17,9 @@ before_script:
 pages:
   script:
   - cd doc/
-  - hugo
+  - hugo -d ../public
   artifacts:
     paths:
-    - doc/public
+    - public
   only:
   - master
