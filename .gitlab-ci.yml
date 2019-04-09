@@ -16,6 +16,7 @@ before_script:
 
 pages:
   script:
+  - sudo apt install rsync
   - mkdir -p public
   - cd src && hugo -d ../public && cd -
   - mv public/index.html public/doc.html
