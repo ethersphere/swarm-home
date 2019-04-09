@@ -16,8 +16,10 @@ before_script:
 
 pages:
   script:
-  - cd doc/
-  - hugo -d ../public
+  - mkdir -p public
+  - cd src && hugo -d ../public && cd -
+  - mv public/index.html public/doc.html
+  - rsync -a * public --exclude src --exclude public
   artifacts:
     paths:
     - public
