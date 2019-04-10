@@ -4,6 +4,9 @@
 
 or web gateway: http://swarm-gateways.net/bzz:/theswarm.eth/
 
+## Warning
+
+Don't make changes on the `gh-pages` branch. Commit changes to the `master` branch and Travis will take care of the rest.
 
 ## Deployment
 
