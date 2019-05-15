@@ -191,12 +191,12 @@
                 <td style='font-family: monospace;'>E17D 65FF D6F5 D3BB 8D75 8839 77EB EE56 6236 55C2</td>
               </tr>
               <tr>
-                <td>OSX Builder</td>
-                <td>Ethereum Swarm OSX Builder &lt;swarm@ethereum.org&gt;</td>
+                <td>macOS Builder</td>
+                <td>Ethereum Swarm macOS Builder &lt;swarm@ethereum.org&gt;</td>
                 <td><a style='font-family: monospace; text-decoration: none;'
-                    href="https://keyserver.ubuntu.com/pks/lookup?search=0x0A3F6FACDFD7CDE507A10705AD58BDA1CE68B2CD&op=get"
-                    target="_blank">CE68B2CD</a></td>
-                <td style='font-family: monospace;'>0A3F 6FAC DFD7 CDE5 07A1 0705 AD58 BDA1 CE68 B2CD</td>
+                    href="https://keyserver.ubuntu.com/pks/lookup?search=0x03A0C1B1D0E01B70755AE35DCF902F10FDA25488&op=get"
+                    target="_blank">FDA25488</a></td>
+                <td style='font-family: monospace;'>03A0 C1B1 D0E0 1B70 755A E35D CF90 2F10 FDA2 5488</td>
               </tr>
               <tr>
                 <td>Windows Builder</td>
@@ -242,11 +242,11 @@
         <h3>Importing keys and verifying builds</h3>
         <p>You can import the build server public keys by grabbing the individual keys directly from the keyserver
           network:</p>
-        <pre>gpg --recv-keys 623655C2 CE68B2CD 57A3AF63 9BA28146 7B9E2481 D2A67EAC</pre>
+        <pre>gpg --recv-keys 623655C2 FDA25488 57A3AF63 9BA28146 7B9E2481 D2A67EAC</pre>
 
         <p>From the download listings above you should see a link both to the downloadable archives as well as detached
           signature files. To verify the authenticity of any downloaded data, grab both files and then run:</p>
-        <pre>gpg --verify geth-linux-amd64-1.5.0-d0c820ac.tar.gz.asc</pre>
+        <pre>gpg --verify swarm-linux-amd64-0.3.11-c9427004.tar.gz.asc</pre>
         <p>Note that you must use the name of the signature file, and you should use the one that's appropriate to the
           download you're verifying.</p>
       </div>
