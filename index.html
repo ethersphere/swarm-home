@@ -92,7 +92,7 @@
           <li class="active"><a href="./downloads/">Downloads</a></li>
           <li class="active"><a href="#roadmap">Roadmap</a></li>
           <li class="active"><a href="#research">Research</a></li>
-          <li class="active"><a href="#projects">Projects</a></li>
+          <li class="active"><a href="#projects">Components</a></li>
           <li class="active"><a href="#talks">Talks</a></li>
           <li class="active"><a href="#media">Media</a></li>
           <li class="active"><a href="#contact">Contact</a></li>
@@ -313,31 +313,54 @@
               target="_blank">documentation repository</a>.</p>
         </div>
       </div>
-    </div><!-- //Container -->
-  </section><!-- //Documentation -->
+        </div><!-- //Container -->
+      </section><!-- //Documentation -->
 
-  <section id="roadmap">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-12 text-left">
-          <div class="page-header">
-            <h1>Roadmap</h1>
-          </div>
-          <p class="lead">
-            Swarm is under active development.
-            <ul>
-              <li class="lead">Proof-of-Concept 0.3 was <a
-                  href="https://blog.ethereum.org/2018/06/21/announcing-swarm-proof-of-concept-release-3/">released</a>
-                in June, 2018.</li>
-              <li class="lead">The <a href="https://github.com/ethersphere/swarm/wiki/Roadmap">Roadmap</a> describes the
-                current status of development, and outlines the path to the upcoming POC releases.</li>
-              <li class="lead">Work is progressing on <a
-                  href="https://github.com/ethersphere/swarm/wiki/Working-groups">several fronts in parallel</a>. </li>
-              <li class="lead">Keep up to date by joining the <a href="https://gitter.im/ethereum/swarm">Swarm gitter
-                  channel</a>.</li>
-            </ul>
-
-
+      <section id="roadmap">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-md-12 text-left">
+                <div class="page-header">
+                  <h1>Roadmap</h1>
+                </div>
+                  <p class="lead">Swarm is under active development.</p>
+                  <P class="lead">Proof-of-Concept 0.3 was <a href="https://blog.ethereum.org/2018/06/21/announcing-swarm-proof-of-concept-release-3/">released</a> in June, 2018.</P>
+                  <h2 id="short-term-milestones">Short term milestones</h2>
+                  <ul>
+                      <li>Stable deployment infrastructure and stable testnet</li>
+                      <li>WeTransfer-like (temp. file-sharing) file sending with sharing, access control and notifications</li>
+                  </ul>
+                  <h2 id="upcoming-features">Upcoming features</h2>
+                  <h3 id="storage-bzz">Storage / BZZ</h3>
+                  <ul>
+                      <li>Push syncing and upload progress bars</li>
+                      <li>Redundancy with Erasure coding</li>
+                      <li>Pinned content</li>
+                      <li>Proof of custody challenge protocol</li>
+                      <li>Blockchain and state data on Swarm, Eth1.x support</li>
+                  </ul>
+                  <h3 id="tooling">Tooling</h3>
+                  <ul>
+                      <li>Lightnode support</li>
+                      <li>Clef integration</li>
+                      <li>Node splitting</li>
+                      <li>Browser support</li>
+                  </ul>
+                  <h3 id="testing">Testing</h3>
+                  <ul>
+                    <li>Large scale network simulations</li>
+                    <li>Churn and throughput models</li>
+                    <li>User perception tests</li>
+                </ul>
+                <h3 id="sw3">SW3</h3>
+                <ul>
+                  <li>Bandwidth accounting Swap</li>
+                  <li>Spam protection</li>
+                  <li>Incentivised proof of custody</li>
+                  <li>Scan and repair</li>
+                  <li>Insurance</li>
+                </ul>
+          <p class="lead">Keep up to date by joining the <a href="https://gitter.im/ethereum/swarm">Swarm gitter channel</a>.</p>
           </p>
         </div>
       </div>
@@ -358,30 +381,27 @@
             The Orange of the orange paper pays hommage to the yellow paper but tainted with the blood sweat and tears
             of cutting edge research.
           </p>
-          <p class="lead">In October 2017 five<a href="https://github.com/ethersphere/swarm/wiki/Working-groups">
-              working groups</a> are starting.</p>
-          <p class="lead">We encourage and appreciate any feedback be it a thorough academic peer review, suggestions
-            for improvement, criticism, questions, typos or just a word of support.</p>
+          <h2>Orange papers</h2>
           <ul>
-            <li class="lead">
-              <a target="_blank" href="./ethersphere/orange-papers/1/sw^3.pdf">Viktor Trón, Aron Fischer, Dániel Nagy A
-                and Zsolt Felföldi, Nick Johnson: swap, swear and swindle: incentive system for Swarm.</a>
-              May 2016
+            <li>Viktor Tr&oacute;n, Aron Fischer, D&aacute;niel Nagy A and Zsolt
+                    Felf&ouml;ldi, Nick Johnson: swap, swear and swindle: incentive system for Swarm. May 2016 -
+                <a href="https://swarm-gateways.net/bzz:/theswarm.eth/ethersphere/orange-papers/1">https://swarm-gateways.net/bzz:/theswarm.eth/ethersphere/orange-papers/1</a>/sw^3.pdf</li>
+            <li>Viktor Tr&oacute;n, Aron Fischer, Nick Johnson: smash-proof: auditable
+                    storage for Swarm secured by masked audit secret hash. May 2016 - 
+                    <a href="https://swarm-gateways.net/bzz:/theswarm.eth/ethersphere/orange-papers/2/smash.pdf">https://swarm-gateways.net/bzz:/theswarm.eth/ethersphere/orange-papers/2/smash.pdf</a>
             </li>
-            <li class="lead">
-              <a target="_blank" href="./ethersphere/orange-papers/2/smash.pdf">Viktor Trón, Aron Fischer, Nick Johnson:
-                smash-proof: auditable storage for Swarm secured by masked audit secret hash.</a>
-              May 2016
+            <li>Viktor Tr&oacute;n, Aron Fischer, Ralph Pilcher, Fabio Barone: swap swear
+                    and swindle games: scalable infrastructure for decentralised service economies. Work in progress. June
+                    2018. - <a href="https://www.overleaf.com/read/yszmsdqyqbvc">https://www.overleaf.com/read/yszmsdqyqbvc</a>
+                    , 
+                    <a href="https://swarm-gateways.net/bzz:/ca5f4684b380644c3042fe81f65b3b9a0668e2e3cff53578fb68af8043f3c0b6/">pfd
+                        on swarm</a>.
             </li>
-            <li class="lead">
-              Viktor Trón, Aron Fischer, Fabio Barone: swap swear and swindle games: scalable infrastructure for
-              decentralised service economies.
-              Not published yet.
-            </li>
-            <li class="lead">
-              Viktor Trón, Elad Verbin, Louis Holbrook: P.O.T. Data structure for decentralised database services on
-              Swarm.
-              Not published yet.
+            <li>Viktor Tr&oacute;n, Aron Fischer, Daniel A. Nagy. Swarm: a decentralised
+                    peer-to-peer network for messaging and storage. Work in progress. June, 2018. - 
+                    <a href="https://www.overleaf.com/read/gxhwssqzgfpr">https://www.overleaf.com/read/gxhwssqzgfpr</a>; 
+                    <a href="https://swarm-gateways.net/bzz:/4f45ae847fc55afb8bfdc381bae0809a0ce29bafc07b41293838fc7afae95d34/">pdf on swarm</a>.</li>
+            <li>Further on papers on PSS, Feeds, POT and Security are in preparation
             </li>
           </ul>
         </div>
@@ -394,55 +414,40 @@
       <div class="row">
         <div class="col-xs-12 col-md-12 text-left">
           <div class="page-header">
-            <h1>Projects</h1>
+            <h1>Components</h1>
+              <h3>Bzz</h3>
+              <p class="lead">scalable distributed storage solution and content distribution network</p>
+              <p>A decentralised permissionless cloud storage service with optimal resource
+                      allocation which is self-sustaining due to built-in economic incentives. It guarantees data integrity and
+                      availability. Users retain sovereign control over their data while enjoying the frictionless experience of
+                      accessing it globally. </p>
+
+              <h3>ACT</h3>
+              <p class="lead"><a href="https://swarm-guide.readthedocs.io/en/latest/usage/act.html">access control</a> and authentication</p>
+              <p>Access to encrypted content using a shared passphrase, a public-private key pair
+                      or an innovative scalable access control system (ACT) offering users sovereign control over private data as
+                      well as scalable user authentication for dapps.</p>
+
+              <h3>PSS</h3>
+              <p class="lead">Secure <a href="https://www.youtube.com/watch?v=PmiLWAhLV2A&list=PLbrz7IuP1hrjjxIng6ve173pXZn0JNC4w&index=10">real-time node-to-node push messaging </a></p>
+              <p>Send messages real-time between online nodes. The messaging protocol is part of the
+                  <b>Web 3 Communication Layer</b>.</p>
+
+              <h3>Feeds </h3>
+              <p class="lead">asynchronous pull messaging</p>
+              <p>Publish and discover updates to a topic. Allows publishers to advertise new versions
+                      of a mutable resource, allows consumers to discover and subscribe to updates. The feed protocol forms
+                      part of the Web 3 Communication Layer</p>
+
+              <h3>&lsquo;SW3&rsquo; (Swap, Swear and Swindle)</h3>
+              <p class="lead">Accounting and accountability</p>
+              <p>Program economic incentives to drive a service network. SW3 a base layer
+                      infrastructure including the SW3 smart-contract suite for decentralised service economies. </p>
+
+              <h3>Swarm DB</h3>
+              <p class="lead">trustless database services</p>
+              <p>Represent and manage your data using infinitely scalable data structures.</p>
           </div>
-          <p class="lead">In October 2017 five<a href="https://github.com/ethersphere/swarm/wiki/Working-groups">
-              working groups</a> are starting.</p>
-          <p class="lead">
-            <a href="https://github.com/ethersphere/swarm/wiki/Working-groups#network-testing-and-simulation-framework">Network
-              Testing and Simulation Framework</a></p>
-          <p class="lead">A project aimed at testing the behaviour of many interconnected Swarm clients, to observe
-            emergent network behaviour and use the results to make the Swarm more efficient and resilient. (<a
-              href="https://youtu.be/-c_kTW_aNgg">demo</a>)
-          </p>
-          <p class="lead">
-            <a
-              href="https://github.com/ethersphere/swarm/wiki/Working-groups#pss-messaging-and-communication-tools">PSS</a>
-          </p>
-          <p class="lead">PSS is concerned with routing messages over the Swarm network to allow direct node-to-node
-            communication as well as decentralised email and postal services. (<a
-              href="https://www.youtube.com/watch?v=x9Rs23itEXo">demo</a>)
-          </p>
-          <p class="lead"><a href="https://github.com/ethersphere/swarm/wiki/Working-groups#streaming">Streaming</a>
-          </p>
-          <p class="lead">This project aims to bring streaming content (audio / video) to the Swarm network. (<a
-              href="https://www.youtube.com/watch?v=MB-drzcRCD8">demo</a>)
-          </p>
-          </p>
-          <p class="lead"><a
-              href="https://github.com/ethersphere/swarm/wiki/Working-groups#db-support-pot-and-indexing">POT/SWORD
-              model for Decentralised database services</a>
-          </p>
-          <p class="lead">This project aims to work on the POT data structure and the SWORD model of distributed
-            provable databases (<a href="https://www.youtube.com/watch?v=MB-drzcRCD8">demo</a>)
-          </p>
-          <p class="lead"><a
-              href="https://github.com/ethersphere/swarm/wiki/Working-groups#swap-swear-and-swindle---contract-development">Swap,
-              Swear and Swindle contract development</a>
-          </p>
-          <p class="lead">Swap-Swear-Swindle is the name of Swarm's state channel infrastructure as described in the
-            orange papers. This working group aims to <a
-              href="https://github.com/ethersphere/swap-swear-and-swindle">implement</a> this generic incentive
-            structure on the ethereum blockchain.
-          </p>
-          <p class="lead"><a
-              href="https://github.com/ethersphere/swarm/wiki/Roadmap#obfuscation-encryption-and-transcoding-track">Data
-              Encoding and Encryption</a>
-          </p>
-          <p class="lead">Swarm is planning to use erasure coding and encryption to ensure data availablilty an
-            security. Well designed obfuscation schemes allow content to be hosted on the network without endagering the
-            participating nodes by guaranteeing them plasuble deniability. (<a
-              href="https://youtu.be/fOJgNPdwy18">demo</a>)
         </div>
       </div>
     </div><!-- //Container -->
@@ -454,10 +459,21 @@
         <div class="col-xs-12 col-md-12 text-left">
           <div class="page-header" style="border-bottom: 0px;">
             <h1>Talks</h1>
-            <p class="lead">The talks from the 2017 Swarm Orange Summit can be found at <a
-                href="/bzz:/swarm-orange-summit.eth/">swarm-orange-summit.eth</a>.<br />Other Swarm-related
-              presentations are listed below:</p>
+            <p class="lead">Swarm Orange Summits Talks</p>
+            <ul>
+                <li><a href="https://www.youtube.com/playlist?list%3DPLM508daI9b1tp1fKXheFYGuPOEX6bIoBv&amp;sa=D&amp;ust=1557926225576000">
+                  June 2017 Berlin</a></li>
+                <li><a href="https://www.youtube.com/playlist?list%3DPLaM7G4Llrb7xNkX0gugDyUm6Z_RrCvWPk&amp;sa=D&amp;ust=1557926225577000">
+                  Nov 2017 P2P+Blockchain breakout session Devcon3 Cancun</a></li>
+                <li><a href="https://www.youtube.com/playlist?list%3DPL4dz1agfBBEqwAoYN4bEnRe9tXb1E1s31&amp;sa=D&amp;ust=1557926225577000">
+                  May 2018 Ljubljana </a></li>
+                <li><a href="https://www.youtube.com/playlist?list%3DPLbrz7IuP1hrhmqr8hCoGhZIjsfj-2MbHc&amp;sa=D&amp;ust=1557926225577000">
+                  November 2018 Mini Summit Prague </a></li>
+                <li><a href="http://summit.ethswarm.org&amp;sa=D&amp;ust=1557926225578000">
+                  May 2019 Madrid </a></li>
+            </ul>
           </div>
+          <p class="lead">Other Swarm-related presentations</p>
           <table class="table table-responsive text-left">
             <tr>
               <td>Descr.</td>
@@ -658,6 +674,7 @@
             <p class="lead">Discussions about Swarm on <a href="https://www.reddit.com/r/ethswarm"
                 target="_blank">/r/ethswarm</a> and <a href="https://www.reddit.com/r/ethereum"
                 target="_blank">/r/ethereum</a> subreddits.</p>
+            <p class="lead">Please feel free to reach out via <a href="mailto:info@ethswarm.org">info@ethswarm.org</p>
           </div>
         </div>
       </div>
