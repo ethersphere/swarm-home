@@ -503,13 +503,13 @@
 
                   // Append the archive to the download table
                   $("<tr style='text-align: center; " + (k == 0 && bin.primary ? " font-weight: bold;" : "") + "' class='" + (group == "develop" && k == 0 ? "latest" : "") + (k >= 2 && entires >= 10 ? " collapse out" : "") + "'>" +
-                    "  <td><a href='https://ethswarmstore.blob.core.windows.net/builds/" + bin.file + "' style='text-decoration: none;'>" + bin.name + "</a></td>" +
+                    "  <td><a href='https://ethswarm.blob.core.windows.net/builds/" + bin.file + "' style='text-decoration: none;'>" + bin.name + "</a></td>" +
                     "  <td><a href='https://github.com/ethersphere/swarm/tree/" + bin.commit + "' target='_blank' style='text-decoration: none; font-family: monospace;'>" + bin.commit + "&hellip;</a></td>" +
                     "  <td>" + bin.kind + "</td>" +
                     "  <td>" + bin.arch + "</td>" +
                     "  <td>" + filesize(bin.size) + "</td>" +
                     "  <td>" + moment(bin.date).calendar() + "</td>" +
-                    "  <td>" + (bin.sig ? "<a href='https://ethswarmstore.blob.core.windows.net/builds/" + bin.file + ".asc' style='text-decoration: none;'>Signature</a>" : "Unavailable") + "</td>" +
+                    "  <td>" + (bin.sig ? "<a href='https://ethswarm.blob.core.windows.net/builds/" + bin.file + ".asc' style='text-decoration: none;'>Signature</a>" : "Unavailable") + "</td>" +
                     "  <td style='font-family: monospace;'>" + bin.sum + "</td>" +
                     "</tr>").appendTo(body);
 
