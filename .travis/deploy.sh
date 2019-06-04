@@ -1,7 +1,7 @@
 #!/bin/bash -xe
 TAG="${TAG:-$TRAVIS_TAG}"
 
-SWARM_BZZ_API="https://swarm-public-staging.stg.swarm-gateways.net/"
+SWARM_BZZ_API="https://swarm-public-45-swarm.prod.swarm-gateways.net/"
 
 GITHUB_ORG="ethersphere"
 GITHUB_REPO="swarm-home"
