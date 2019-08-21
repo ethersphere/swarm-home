@@ -37,7 +37,7 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
   <!-- Font Awesome & Fonts -->
-  <script src="https://use.fontawesome.com/9c24f2ebbb.js"></script>
+  <script src="https://kit.fontawesome.com/bd3d39868b.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
   <!-- modernizer -->
   <script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -87,29 +87,12 @@
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#intro">Introduction</a></li>
-          <li class="active"><a href="#install">Install</a></li>
+          <li class="active"><a href="#get-started">Get started</a></li>
           <li class="active"><a href="./downloads/">Downloads</a></li>
-          <li class="active"><a href="#roadmap">Roadmap</a></li>
           <li class="active"><a href="#research">Research</a></li>
-          <li class="active"><a href="#projects">Components</a></li>
           <li class="active"><a href="#talks">Talks</a></li>
           <li class="active"><a href="#media">Media</a></li>
           <li class="active"><a href="#contact">Contact</a></li>
-          <!--
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-          -->
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -141,16 +124,15 @@
         </div>
         <div class="col-md-6 tutorial scrollme">
           <div class="header-title">
-            <h1 data-when="exit" data-from="0" data-to="1" data-translatey="340" data-easing="linear" class="animateme"
+            <h1 data-when="exit" data-from="0" data-to="1" data-translatey="240" data-easing="linear" class="animateme"
               style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
               SWARM</h1>
             <h3 data-when="exit" data-from="0" data-to="0.5" data-translatey="200" data-opacity="0" data-easing="linear"
               class="animateme"
               style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);"
               class="swarm-subtitle">
-              serverless hosting<br />
-              incentivised peer-to-peer storage<br />
-              and content distribution
+              Storage and Communication<br />
+              for a Sovereign Digital Society<br />
             </h3>
           </div>
         </div>
@@ -161,6 +143,44 @@
   </div>
   <!---//tutorial start / swarm page intro--->
 
+
+  <section id="get-started" class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-12 text-left">
+          <div class="page-header">
+            <h1 style="text-align:center">Get started</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-4 text-center">
+          <i width="50" height="50" class="fa fa-code icocss"></i>
+          <a href="https://swarm-guide.readthedocs.io/en/latest/dapp_developer/index.html" target="_blank">
+            <h4 class="text-center font-weight-bold">DApp Developer</h4>
+          </a>
+          <p>Use Swarm for your applications</p>
+        </div>
+        <div class="col-xs-12 col-md-4 text-center">
+          <i width="50" height="50" class="fa fa-server icocss"></i>
+          <a href="https://swarm-guide.readthedocs.io/en/latest/node_operator.html" target="_blank">
+            <h4 class="text-cente font-weight-bold">Node Operator</h4>
+          </a>
+          <p>Run and manage a Swarm node</p>
+        </div>
+        <div class="col-xs-12 col-md-4 text-center">
+          <i width="50" height="50" class="fa fa-code-branch icocss"></i>
+          <a href="https://swarm-guide.readthedocs.io/en/latest/go_client_contributor.html" target="_blank">
+            <h4 class="text-center font-weight-bold">Client Contributor</h4>
+          </a>
+          <p>Contribute to the Swarm codebase</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
   <!-- Begin page content class for text-align: .text-center-->
   <section id="intro" class="main">
     <div class="container">
@@ -169,12 +189,13 @@
           <div class="page-header">
             <h1>Swarm and web3</h1>
           </div>
-          <p class="lead"><a href="https://blog.ethereum.org/2016/12/15/swarm-alpha-public-pilot-basics-swarm/">Swarm is
-              a distributed storage platform and content distribution service</a>, a native base layer service of the
-            ethereum web3 stack. The primary objective of Swarm is to provide a decentralized and redundant store for
-            dapp code and data as well as block chain and state data. Swarm is also set out to provide various base
-            layer services for web3, including node-to-node messaging, media streaming, decentralised database services
-            and scalable state-channel infrastructure for decentralised service economies.</p>
+          <p class="lead"><a href="https://blog.ethereum.org/2016/12/15/swarm-alpha-public-pilot-basics-swarm/">
+            Swarm is a distributed storage platform and content distribution service</a>, a native base layer service
+            of the ethereum web3 stack that aims to provide a decentralized and redundant store for dapp code, user data, 
+            blockchain and state data. Swarm sets out to provide various base layer services for web3, 
+            including node-to-node messaging, media streaming, decentralised database services and scalable state-channel 
+            infrastructure for decentralised service economies.
+          </p>
         </div>
       </div>
 
@@ -183,34 +204,28 @@
         <ul class="row frontpage-services">
           <li class="col">
             <i width="50" height="50" class="fa fa-bug icocss"></i>
-
             <h4>Fault Tolerant</h4>
-            <p>Redundant storage: local replication and erasure coding ensures data availability even in the face of
-              node dropouts or data loss.</p>
+            <p>Cross-node replication and erasure coding ensures data availability</p>
           </li>
           <li class="col">
             <i width="50" height="50" class="fa fa-hand-rock-o icocss"></i>
-
             <h4>Censorship Resistant</h4>
-            <p>Sites cannot be 'taken down': data is stored throughout the network without vulnerable central hubs.</p>
+            <p>Data is stored throughout the network without vulnerable central hubs</p>
           </li>
           <li class="col">
             <i width="50" height="50" class="fa fa-ban icocss"></i>
-
             <h4>DDoS Resistant</h4>
-            <p>Fully decentralised peer-to-peer network is more resilient against DDoS than any centralised system.</p>
+            <p>Decentralised peer-to-peer networks mitigate DDoS attack vectors</p>
           </li>
           <li class="col">
             <i width="50" height="50" class="fa fa-arrow-circle-o-up icocss"></i>
-
             <h4>Zero Downtime</h4>
-            <p>Redundancy ensures that the network continues to deliver data even when individual nodes go offline.</p>
+            <p>Redundancy ensures continued data delivery even when individual nodes go offline</p>
           </li>
           <li class="col">
             <i width="50" height="50" class="fa fa-refresh icocss"></i>
-
             <h4>Self-sustaining</h4>
-            <p>Built-in incentive system ensures the network's economic viability.</p>
+            <p>Built-in incentive system ensures the network's economic viability</p>
           </li>
         </ul>
       </div>
@@ -235,139 +250,6 @@
     </div><!-- //Container -->
   </section><!-- //Status -->
 
-  <section id="install">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-12 text-left">
-          <div class="page-header">
-            <h1>Installing Swarm</h1>
-          </div>
-          <h3>Install on Ubuntu via PPAs</h3>
-
-          <p>The simplest way to install Swarm on Ubuntu distributions is via the built in launchpad PPAs
-            (Personal Package Archives). We provide a single PPA repository that contains our stable releases for Ubuntu
-            versions trusty, xenial, artful, bionic and cosmic.</p>
-
-          <p style="font-family: monospace">
-            sudo apt-get install software-properties-common<br />
-            sudo add-apt-repository -y ppa:ethereum/ethereum<br />
-
-            sudo apt-get update<br />
-            sudo apt-get install ethereum-swarm<br />
-          </p>
-
-          <p>&nbsp;</p>
-
-          <h3>Installing Swarm from source</h3>
-          <p>The latest Swarm source code can be found on Github: <a
-              href="https://github.com/ethersphere/swarm"
-              target="_blank">https://github.com/ethersphere/swarm</a>.</p>
-
-          <p>To build Swarm from source, you'll need to ensure that you have Go 1.11 installed (or latest
-            version).</p>
-
-          <p style="font-family: monospace">
-            go get -d github.com/ethersphere/swarm<br />
-            go install github.com/ethersphere/swarm/cmd/swarm<br />
-          </p>
-
-          <h3>Run Swarm in a Docker container</h3>
-          <p>The official Swarm Docker image including documentation on how to run it can be found at <a
-              href="https://github.com/ethersphere/swarm-docker"
-              target="_blank">https://github.com/ethersphere/swarm-docker</a> or pulled from <a
-              href="https://hub.docker.com/r/ethdevops/swarm/" target="_blank">ethdevops/swarm</a>.</p>
-        </div>
-      </div>
-    </div><!-- //Container -->
-  </section><!-- //Install -->
-
-  <section id="downloads">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-12 text-left">
-          <div class="page-header">
-            <h1>Downloads</h1>
-          </div>
-          <p class="lead">You can find pre-packaged builds of stable and unstable versions of Swarm on our <a
-              href="./downloads/">Downloads page</a>.</p>
-        </div>
-      </div>
-    </div><!-- //Container -->
-  </section><!-- //Install -->
-
-  <section id="documentation">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-12 text-left">
-          <div class="page-header">
-            <h1>Documentation</h1>
-          </div>
-          <p class="lead">
-            Swarm documentation can be found at <a target="_blank"
-              href="https://swarm-guide.readthedocs.io/">https://swarm-guide.readthedocs.io</a>.</p>
-
-          <p>
-            Since Swarm is under active development, new features are constantly being added, tweaked and fine-tuned. In
-            order to keep the documentation relatively up to date, the community is encouraged to contribute to the
-            guide by submitting pull requests to the <a href="https://github.com/ethersphere/swarm-guide"
-              target="_blank">Documentation repository</a>.</p>
-        </div>
-      </div>
-        </div><!-- //Container -->
-      </section><!-- //Documentation -->
-
-      <section id="roadmap">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12 col-md-12 text-left">
-                <div class="page-header">
-                  <h1>Roadmap</h1>
-                </div>
-                  <p class="lead">Swarm is under active development.</p>
-                  <p class="lead">Proof-of-Concept 0.3 was <a href="https://blog.ethereum.org/2018/06/21/announcing-swarm-proof-of-concept-release-3/">released</a> in June, 2018.</p>
-                  <p class="lead">Proof-of-Concept 0.4 was released in May, 2019.</p>
-                  <p class="lead">You can follow the project by checking out our <a href="https://github.com/orgs/ethersphere/projects" target="_blank">Project Boards</a> at our <a href="https://github.com/ethersphere" target="_blank">Github Organisation page</a></p>
-                  <p>&nbsp;</p>
-                  <h2 id="short-term-milestones">Short term milestones</h2>
-                  <ul>
-                      <li>Stable deployment infrastructure and stable testnet</li>
-                      <li>WeTransfer-like file sharing, access control and notifications</li>
-                  </ul>
-                  <p>&nbsp;</p>
-                  <h2 id="upcoming-features">Upcoming features</h2>
-                  <h3 id="storage-bzz">Storage / BZZ</h3>
-                  <ul>
-                      <li>Push syncing and upload progress bars</li>
-                      <li>Redundancy with Erasure coding</li>
-                      <li>Pinned content</li>
-                      <li>Proof of custody challenge protocol</li>
-                      <li>Blockchain and state data on Swarm, Eth1.x support</li>
-                  </ul>
-                  <h3 id="tooling">Tooling</h3>
-                  <ul>
-                      <li>Lightnode support</li>
-                      <li>Clef integration</li>
-                      <li>Node splitting</li>
-                      <li>Browser support</li>
-                  </ul>
-                  <h3 id="testing">Testing</h3>
-                  <ul>
-                    <li>Large scale network simulations</li>
-                    <li>Churn and throughput models</li>
-                </ul>
-                <h3 id="sw3">SW3</h3>
-                <ul>
-                  <li>Bandwidth accounting Swap</li>
-                  <li>Spam protection</li>
-                  <li>Incentivised proof of custody</li>
-                  <li>Scan and repair</li>
-                  <li>Insurance</li>
-                </ul>
-        </div>
-      </div>
-    </div><!-- //Container -->
-  </section><!-- //Roadmap -->
-
   <section id="research">
     <div class="container">
       <div class="row">
@@ -382,26 +264,37 @@
             The Orange of the orange paper pays hommage to the yellow paper but tainted with the blood sweat and tears
             of cutting edge research.
           </p>
-          <h2>Orange papers</h2>
+          <h2 style="margin-top: 40px;margin-bottom: 30px;">Orange papers</h2>
           <ul>
-            <li>Viktor Tr&oacute;n, Aron Fischer, D&aacute;niel Nagy A and Zsolt
-                    Felf&ouml;ldi, Nick Johnson: swap, swear and swindle: incentive system for Swarm. May 2016 -
-                <a href="https://swarm-gateways.net/bzz:/theswarm.eth/ethersphere/orange-papers/1">https://swarm-gateways.net/bzz:/theswarm.eth/ethersphere/orange-papers/1</a>/sw^3.pdf</li>
-            <li>Viktor Tr&oacute;n, Aron Fischer, Nick Johnson: smash-proof: auditable
-                    storage for Swarm secured by masked audit secret hash. May 2016 - 
-                    <a href="https://swarm-gateways.net/bzz:/theswarm.eth/ethersphere/orange-papers/2/smash.pdf">https://swarm-gateways.net/bzz:/theswarm.eth/ethersphere/orange-papers/2/smash.pdf</a>
+            <li>
+              <a href="https://swarm-gateways.net/bzz:/theswarm.eth/ethersphere/orange-papers/1/sw%5E3.pdf"
+                target="_blank">
+                <strong>Swap, swear and swindle: incentive system for Swarm.</strong>
+              </a>
+              Viktor Tr&oacute;n, Aron Fischer, D&aacute;niel Nagy A and Zsolt Felf&ouml;ldi, Nick Johnson (May 2016)
             </li>
-            <li>Viktor Tr&oacute;n, Aron Fischer, Ralph Pilcher, Fabio Barone: swap swear
-                    and swindle games: scalable infrastructure for decentralised service economies. Work in progress. June
-                    2018. - <a href="https://www.overleaf.com/read/yszmsdqyqbvc">https://www.overleaf.com/read/yszmsdqyqbvc</a>
-                    , 
-                    <a href="https://swarm-gateways.net/bzz:/ca5f4684b380644c3042fe81f65b3b9a0668e2e3cff53578fb68af8043f3c0b6/">pfd
-                        on swarm</a>.
+            <li>
+              <a href="https://swarm-gateways.net/bzz:/theswarm.eth/ethersphere/orange-papers/2/smash.pdf"
+                target="_blank">
+                <strong>Smash-proof: auditable storage for Swarm secured by masked audit secret hash.</strong>
+              </a>
+              Viktor Tr&oacute;n, Aron Fischer, Nick Johnson (May 2016)
             </li>
-            <li>Viktor Tr&oacute;n, Aron Fischer, Daniel A. Nagy. Swarm: a decentralised
-                    peer-to-peer network for messaging and storage. Work in progress. June, 2018. - 
-                    <a href="https://www.overleaf.com/read/gxhwssqzgfpr">https://www.overleaf.com/read/gxhwssqzgfpr</a>; 
-                    <a href="https://swarm-gateways.net/bzz:/4f45ae847fc55afb8bfdc381bae0809a0ce29bafc07b41293838fc7afae95d34/">pdf on swarm</a>.</li>
+            <li>
+              <a href="https://www.overleaf.com/read/yszmsdqyqbvc" target="_blank">
+                <strong>Swap swear and swindle games: scalable infrastructure for decentralised service
+                  economies.</strong>
+              </a>
+              <strong>(Work in progress)</strong>
+              Viktor Tr&oacute;n, Aron Fischer, Ralph Pilcher, Fabio Barone (June 2018)
+            </li>
+            <li>
+              <a href="https://www.overleaf.com/read/gxhwssqzgfpr" target="_blank">
+                <strong>Swarm: a decentralised peer-to-peer network for messaging and storage.</strong>
+              </a>
+              <strong>(Work in progress)</strong>
+              Viktor Tr&oacute;n, Aron Fischer, Daniel A. Nagy (June 2018)
+            </li>
             <li>Further on papers on PSS, Feeds, POT and Security are in preparation
             </li>
           </ul>
@@ -410,61 +303,19 @@
     </div><!-- //Container -->
   </section><!-- //Research -->
 
-  <section id="projects">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-12 text-left">
-          <div class="page-header">
-            <h1>Components</h1>
-              <h3>BZZ</h3>
-              <p class="lead">Scalable distributed storage solution and content distribution network</p>
-              <p>A decentralised permissionless cloud storage service with optimal resource
-                      allocation which is self-sustaining due to built-in economic incentives. It guarantees data integrity and
-                      availability. Users retain sovereign control over their data while enjoying the frictionless experience of
-                      accessing it globally. <br/><br/></p>
-
-              <h3>ACT</h3>
-              <p class="lead"><a href="https://swarm-guide.readthedocs.io/en/latest/usage/act.html">Access control</a> and Authentication</p>
-              <p>Access to encrypted content using a shared passphrase, a public-private key pair
-                      or an innovative scalable access control system (ACT) offering users sovereign control over private data as
-                      well as scalable user authentication for dapps.<br/><br/></p>
-
-              <h3>PSS</h3>
-              <p class="lead">Secure <a href="https://www.youtube.com/watch?v=PmiLWAhLV2A&list=PLbrz7IuP1hrjjxIng6ve173pXZn0JNC4w&index=10">real-time node-to-node push messaging </a></p>
-              <p>Send messages real-time between online nodes. The messaging protocol is part of the
-              <strong>Web3 Communication Layer</strong>.<br/><br/></p>
-
-              <h3>Feeds</h3>
-              <p class="lead">Asynchronous pull messaging</p>
-              <p>Publish and discover updates to a topic. Allows publishers to advertise new versions
-                      of a mutable resource, allows consumers to discover and subscribe to updates. The feed protocol forms
-                      part of the Web3 Communication Layer<br/><br/></p>
-
-              <h3>SW3 (Swap, Swear and Swindle)</h3>
-              <p class="lead">Accounting and accountability</p>
-              <p>Program economic incentives to drive a service network. SW3 is a base layer
-              infrastructure including the SW3 smart-contract suite for decentralised service economies.<br/><br/></p>
-
-              <h3>Swarm DB</h3>
-              <p class="lead">Trustless database services</p>
-              <p>Represent and manage your data using infinitely scalable data structures.</p>
-          </div>
-        </div>
-      </div>
-    </div><!-- //Container -->
-  </section><!-- //Projects -->
-
   <section id="talks" style="margin-top: 22px;">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-12 text-left">
-          <p class="lead">Past Swarm-related presentations</p>
+          <div class="page-header">
+            <h1>Talks</h1>
+          </div>
           <table class="table table-responsive text-left">
             <tr>
-              <td>Descr.</td>
-              <td>Links</td>
-              <td>Vids</td>
-              <td>PDF</td>
+              <th>Description</th>
+              <th>Link</th>
+              <th>Video</th>
+              <th>PDF</th>
             </tr>
             <tr>
               <td>An hour and a half deep dive into technological basis of Swarm, the vision of web3, p2p and blockchain
@@ -480,7 +331,7 @@
                   href="https://ethereumfoundation.org/devcon/?session=40-ens-ethereum-domain-name-system">DevCon2,
                   Shanghai, 19th Sep 2016</a></td>
               <td><a target="_blank" href="https://www.youtube.com/watch?v=pLDDbCZXvTE"><i
-                    class="fa fa-youtube-play ico-tabl"></i></a></td>
+                    class="fab fa-youtube ico-tabl"></i></a></td>
               <td>-</td>
             </tr>
             <tr>
@@ -489,7 +340,7 @@
                   href="https://ethereumfoundation.org/devcon/?session=swap-swear-and-swindle-swarm-incetivisation">DevCon2,
                   Shanghai, 19th Sep 2016.</a></td>
               <td><a target="_blank" href="https://www.youtube.com/watch?v=DZbhjnhP5g4"><i
-                    class="fa fa-youtube-play ico-tabl"></i></a></td>
+                    class="fab fa-youtube ico-tabl"></i></a></td>
               <td><a target="_blank" href="talks/devcon2/sw^3/sw^3-slides.pdf"><i
                     class="fa fa-file-pdf-o ico-tabl"></i></a></td>
             </tr>
@@ -502,7 +353,7 @@
                   Shanghai, 19th Sep 2016.</a>
               </td>
               <td><a target="_blank" href="https://www.youtube.com/watch?v=RF8L6V_E-MM"><i
-                    class="fa fa-youtube-play ico-tabl"></i></a></td>
+                    class="fab fa-youtube ico-tabl"></i></a></td>
               <td><a target="_blank" href="talks/devcon2/web3/web3-slides.pdf"><i
                     class="fa fa-file-pdf-o ico-tabl"></i></a></td>
             </tr>
@@ -512,7 +363,7 @@
                   href="https://ethereumfoundation.org/devcon/?session=developing-scalable-decentralized-applications-for-swarm-ethereum">DevCon2,
                   Shanghai, 19th Sep 2016</a></td>
               <td><a target="_blank" href="https://www.youtube.com/watch?v=xrw9rvee7rc"><i
-                    class="fa fa-youtube-play ico-tabl"></i></a></td>
+                    class="fab fa-youtube ico-tabl"></i></a></td>
               <td>-</td>
             </tr>
             <tr>
@@ -544,7 +395,7 @@
               <td><a target="_blank" href="http://www.meetup.com/Berlin-Ethereum-Meetup/events/231044919/">Ethereum
                   Meetup, Berlin, 25 May 2016.</a></td>
               <td><a target="_blank" href="https://www.youtube.com/watch?v=Y9kch84cbPA"><i
-                    class="fa fa-youtube-play ico-tabl"></i></a></td>
+                    class="fab fa-youtube ico-tabl"></i></a></td>
               <td><a target="_blank" href="talks/berlin-2016-05-25/berlin-swarm-talk-final.pdf"><i
                     class="fa fa-file-pdf-o ico-tabl"></i></a></td>
             </tr>
@@ -553,7 +404,7 @@
               <td><a target="_blank" href="http://www.meetup.com/ethereum/events/231452190">Ethereum meetup London, 9
                   June 2016.</a></td>
               <td><a target="_blank" href="https://www.youtube.com/watch?v=BAAAhZI7qRQ"><i
-                    class="fa fa-youtube-play ico-tabl"></i></a></td>
+                    class="fab fa-youtube ico-tabl"></i></a></td>
               <td>
                 <a target="_blank" href="talks/london-2016-06-09/london-swarm-talk-1-intro-slides.pdf"><i
                     class="fa fa-file-pdf-o ico-tabl"></i></a>
@@ -566,7 +417,7 @@
               <td><a target="_blank" href="http://www.meetup.com/BitcoinBudapest/events/231862845/">Budapest Bitcoin
                   Meetup. 20 June 2016.</a></td>
               <td><a target="_blank" href="https://www.youtube.com/watch?v=vD8PAJvhH-4"><i
-                    class="fa fa-youtube-play ico-tabl"></i></a></td>
+                    class="fab fa-youtube ico-tabl"></i></a></td>
               <td><a target="_blank" href="talks/budapest-2016-06-20/budapest-swarm.pdf"><i
                     class="fa fa-file-pdf-o ico-tabl"></i></a></td>
             </tr>
@@ -574,7 +425,7 @@
               <td>Dániel Nagy: Swarm: Distributed storage for Ethereum, the Turing-complete blockchain.</td>
               <td><a target="_blank" href="http://www.it-sobytie.ru/en/events/4868">Linux Piter Nov 2015.</a></td>
               <td><a target="_blank" href="https://www.youtube.com/watch?v=N_vtxw6nfmQ"><i
-                    class="fa fa-youtube-play ico-tabl"></i></a></td>
+                    class="fab fa-youtube ico-tabl"></i></a></td>
               <td><a target="_blank" href="talks/linux-piter-2015-11-21/linuxpiter.pdf"><i
                     class="fa fa-file-pdf-o ico-tabl"></i></a></td>
             </tr>
@@ -582,7 +433,7 @@
               <td>Viktor Trón, Dániel A. Nagy: Swarm. Ethereum Devcon1, London, Nov 2015.</td>
               <td>-</td>
               <td><a target="_blank" href="https://www.youtube.com/watch?v=VOC45AgZG5Q"><i
-                    class="fa fa-youtube-play ico-tabl"></i></a></td>
+                    class="fab fa-youtube ico-tabl"></i></a></td>
               <td>-</td>
             </tr>
             <tr>
@@ -591,7 +442,7 @@
               <td>-</td>
               <td><a target="_blank"
                   href="https://www.youtube.com/watch?v=QzYZQ03ON2o&amp;list=PLJqWcTqh_zKEjpSej3ddtDOKPRGl_7MhS"><i
-                    class="fa fa-youtube-play ico-tabl"></i></a></td>
+                    class="fab fa-youtube ico-tabl"></i></a></td>
               <td>-</td>
             </tr>
           </table>
@@ -604,13 +455,13 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-12 text-left">
-          <div class="page-header" style="border-bottom: 0px;">
-            <h1>Online Press</h1>
+          <div class="page-header">
+            <h1>Media</h2>
           </div>
           <table class="table table-responsive text-left">
             <tr>
-              <td>Descr.</td>
-              <td>Links</td>
+              <th>Description</th>
+              <th>Link</th>
             </tr>
             <tr>
               <td>Ethereum's holy trinity takes shape as Swarm testnet arrives.</td>
@@ -650,62 +501,78 @@
   </section><!-- //Status -->
 
   <section id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-12 text-left">
-          <div class="page-header" style="border-bottom: 0px;">
-            <h1>Contact Information</h1>
-            <p class="lead">The Swarm team is reachable on <a href="https://gitter.im/ethereum/swarm">Gitter</a>.</p>
-            <p class="lead">Discussions about Swarm on <a href="https://www.reddit.com/r/ethswarm"
-                target="_blank">/r/ethswarm</a> and <a href="https://www.reddit.com/r/ethereum"
-                target="_blank">/r/ethereum</a> subreddits.</p>
-            <p class="lead">Please feel free to reach out via <a href="mailto:info@ethswarm.org">info@ethswarm.org</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-12 text-left">
+            <div class="page-header">
+              <h1 style="text-align:center">Contact</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <div class="text-center">
+                  <a href="https://twitter.com/ethswarm">
+                    <i class="fab fa-2x fa-fw fa-twitter" aria-hidden="true "></i>
+                    <h4>@ethswarm</h4>
+                  </a>
+                </div>
+                <p>Follow us on twitter</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <div class="text-center">
+                  <a href="https://www.reddit.com/r/ethswarm">
+                    <i class="fab fa-2x fa-fw fa-reddit" aria-hidden="true "></i>
+                    <h4>r/ethswarm</h4>
+                  </a>
+                </div>
+                <p>Check our subreddit</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <div class="text-center">
+                  <a href="https://beehive.ethswarm.org">
+                    <i class="fa fa-2x fa-fw fa-comment-dots" aria-hidden="true "></i>
+                    <h4>BeeHive</h4>
+                  </a>
+                </div>
+                <p>Chat with us on Mattermost</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <div class="text-center">
+                  <a href="https://github.com/ethersphere/">
+                    <i class="fab fa-2x fa-fw fa-github" aria-hidden="true "></i>
+                    <h4>ethersphere</h4>
+                  </a>
+                </div>
+                <p>Code on GitHub</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-    </div>
-    <!--Container-->
   </section>
-  <!--Contact-->
 
-  <div style="min-height:80px;"></div>
+  <footer class="footer">
+    <p>© 2019 Swarm</p>
+  </footer>
 
   <!---<p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
   </div>--->
 
-  <footer class="navbar-fixed-bottom" id="contact">
-    <div class="container">
-      <div class="row footercon">
-        <div class="col-xs-12 col-md-12 text-left linkframe">
-          <a href="https://swarm-guide.readthedocs.io">
-            <i class="fa fa-book" aria-hidden="true"></i>
-            Documentation
-          </a>
-          <a href="https://github.com/ethersphere/swarm">
-            <i class="fa fa-bolt" aria-hidden="true"></i>
-            Source Code
-          </a>
-          <a href="https://github.com/ethersphere/swarm/issues">
-            <i class="fa fa-github-alt" aria-hidden="true"></i>
-            Issues on Github
-          </a>
-          <a href="https://twitter.com/ethswarm">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            Swarm on Twitter
-          </a>
-          <a href="https://twitter.com/ethersphere">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            Ethersphere on Twitter
-          </a>
-          <span class="text-right"
-            style="float:right; color:#ccc; font-weight:200;font-size: 0.7em; margin-top: 6px;">©2019 Swarm</span>
-        </div>
-      </div>
-      <!--row-->
-    </div>
-    <!--container-->
-  </footer>
 
   <!-- Bootstrap core JavaScript
   ================================================== -->

@@ -42,7 +42,7 @@
   background-repeat: repeat-x;
 }
 .navbar-default {
-  background-color: #000;
+  background-color: #222;
   border-radius: 0px;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
@@ -50,7 +50,7 @@
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .active > a {
   color: #F7A000;
-  background-color: #000;
+  background-color: #222;
   -webkit-box-shadow: inset 0 3px 9px rgba(247, 160, 0, .075);
           box-shadow: inset 0 3px 9px rgba(247, 160, 0, .075);
 }
@@ -178,11 +178,11 @@ html {
 
 /*---footer---*/
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-color: #000 !important;
+  position: relative;
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
 }
 .swarm-subtitle {
   white-space: nowrap !important;
@@ -334,10 +334,41 @@ html, body {
 }
 
 .inner-header .header-title h3{
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 
 .navbar-header .navbar-toggle:hover{
   margin-bottom: 0;
+}
+
+
+.swarm-page.main-tutorial{
+  background: #ffa500;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffa500, #ffbb60);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffa500, #ffbb60); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.swarm-page.inner-header {
+  padding: 20px;
+}
+
+.table > tbody > tr > th {
+  border-top: 0px;
+}
+
+.page-header h1, .page-header h2{
+  text-align: left;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+.header-title{
+    font-family: 'Exo', sans-serif;
+}
+
+.font-weight-bold{
+  font-weight: bold;
 }
