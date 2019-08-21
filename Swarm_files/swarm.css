@@ -142,7 +142,7 @@ max-width: 50em;
   text-align: center;
   margin: 0;
 }
-.main li:not(:first-child) {
+.main .attribute:not(:first-child) {
   /*border-left: 1px solid #373938;*/
   border-width: 0;
   border-left-width: 1px;
@@ -289,7 +289,7 @@ html, body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .navbar-fixed-bottom {
       position: absolute;
       bottom: -130px;
@@ -322,7 +322,7 @@ html, body {
   footer a:not(:first-of-type) {
   margin-left: 0;
   }
-  .main li:not(:first-child) {
+  .main .attribute:not(:first-child) {
     border-left-width: 0;
   }
 }
@@ -370,5 +370,10 @@ html, body {
 }
 
 .font-weight-bold{
+  font-weight: bold;
+}
+
+.attribute h4{
+  font-size: 15px;
   font-weight: bold;
 }
